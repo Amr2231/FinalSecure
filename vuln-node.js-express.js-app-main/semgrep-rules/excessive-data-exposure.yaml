@@ -1,0 +1,19 @@
+rules:
+  - id: express-excessive-user-data-exposure
+    patterns:
+      - pattern: |
+          $DB.$MODEL.findAll({..., include: "users", ...})
+      - pattern-inside: |
+          app.get($ROUTE, ($REQ, $RES) => {
+            ...
+          })
+    message: "Detected API endpoint exposing user data without authentication. This may leak PII (passwords, emails, addresses)."
+    severity: ERROR
+    languages:
+      - javascript
+    metadata:
+      category: security
+      owasp: "A01:2021 - Broken Access Control"
+      cwe: "CWE-639: Authorization Bypass Through User-Controlled Key"
+      references:
+        - "https://owasp.org/API-Security/editions/2023/en/0xa3-broken-object-property-level-authorization/"

@@ -1,0 +1,9 @@
+rules:
+  - id: xss-res-send
+    languages: [javascript]
+    message: "User input sent to res.send/res.render without sanitization (possible XSS)"
+    severity: ERROR
+    patterns:
+      - pattern-either:
+         - pattern: res.send($INPUT)
+         - pattern: res.render($TEMPLATE, $INPUT)

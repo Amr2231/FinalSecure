@@ -1,0 +1,52 @@
+                    
+                    
+┌──────────────────┐
+│ 11 Code Findings │
+└──────────────────┘
+                                             
+  [36m[22m[24m  src/router/routes/admin.js[0m
+   ❯❯❱ semgrep-rules.xss-res-send
+          User input sent to res.send/res.render without sanitization (possible XSS)
+                                                                                    
+          111┆ res.send(err.toString());
+                                                
+  [36m[22m[24m  src/router/routes/frontend.js[0m
+   ❯❯❱ semgrep-rules.xss-res-send
+          User input sent to res.send/res.render without sanitization (possible XSS)
+                                                                                    
+           18┆ res.render('user.html',
+           19┆ {message : rendered});
+            ⋮┆----------------------------------------
+           41┆ res.render('user-register.html',
+           42┆ {message : rendered});
+            ⋮┆----------------------------------------
+          164┆ res.render('profile.html',
+          165┆ {beers : beers, user:user[0]});        })
+            ⋮┆----------------------------------------
+          218┆ res.render('beer.html',
+          219┆     {beers : beer,message:love_message, user:user[0]});
+                                             
+  [36m[22m[24m  src/router/routes/order.js[0m
+   ❯❯❱ semgrep-rules.xss-res-send
+          User input sent to res.send/res.render without sanitization (possible XSS)
+                                                                                    
+           35┆ res.send("error")
+            ⋮┆----------------------------------------
+           41┆ res.send(data)
+            ⋮┆----------------------------------------
+           45┆ res.send(buffer)
+                                              
+  [36m[22m[24m  src/router/routes/system.js[0m
+   ❯❯❱ semgrep-rules.xss-res-send
+          User input sent to res.send/res.render without sanitization (possible XSS)
+                                                                                    
+           18┆ res.send(test)
+                                            
+  [36m[22m[24m  src/router/routes/user.js[0m
+   ❯❯❱ semgrep-rules.xss-res-send
+          User input sent to res.send/res.render without sanitization (possible XSS)
+                                                                                    
+          334┆ res.send(user)
+            ⋮┆----------------------------------------
+          362┆ res.send(user)
+

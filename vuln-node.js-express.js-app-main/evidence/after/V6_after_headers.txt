@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 108
+ETag: W/"6c-HU2dgrDAzZ56xHxM30HaCmfF0T8"
+Set-Cookie: sessionID=s%3A1766148999671.1060QDhIrUmsuFOGyRAn2lpvWnUJzvv1CMq8SzG4Zf8; Path=/; Expires=Sat, 18 Apr 2026 12:56:39 GMT; SameSite=Lax
+Date: Fri, 19 Dec 2025 12:56:39 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+

@@ -1,0 +1,10 @@
+HTTP/1.1 403 Forbidden
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 34
+ETag: W/"22-t601rxdZLFnUDeGIrq0TqhYlOK4"
+Set-Cookie: sessionID=s%3A1766150035482.KQbieGNyAhexBknQqo0cqXnrbzzYzGJN6iMrLeaViAo; Path=/; Expires=Sat, 18 Apr 2026 13:13:55 GMT; SameSite=Lax
+Date: Fri, 19 Dec 2025 13:13:55 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+

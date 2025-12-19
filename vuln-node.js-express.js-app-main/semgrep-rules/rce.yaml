@@ -1,0 +1,40 @@
+rules:
+  - id: node-rce-command-injection
+    languages:
+      - javascript
+      - typescript
+    severity: ERROR
+
+    message: >
+      Remote Code Execution risk: user-controlled input is passed to OS
+      command execution functions (exec / execSync / spawn).
+
+    metadata:
+      category: security
+      cwe: CWE-78
+      owasp: A03:2021-Injection
+      confidence: HIGH
+
+    patterns:
+      - pattern-either:
+          - pattern: |
+              exec($CMD, ...)
+          - pattern: |
+              execSync($CMD, ...)
+          - pattern: |
+              spawn($CMD, ...)
+          - pattern: |
+              spawnSync($CMD, ...)
+          - pattern: |
+              child_process.exec($CMD, ...)
+          - pattern: |
+              child_process.execSync($CMD, ...)
+
+      - pattern-either:
+          - pattern: |
+              req.params.$X
+          - pattern: |
+              req.query.$X
+          - pattern: |
+              req.body.$X
+

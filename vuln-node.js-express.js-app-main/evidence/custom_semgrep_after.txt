@@ -1,0 +1,44 @@
+                   
+                   
+┌─────────────────┐
+│ 9 Code Findings │
+└─────────────────┘
+                                             
+  [36m[22m[24m  src/router/routes/admin.js[0m
+   ❯❯❱ semgrep-rules.xss-res-send
+          User input sent to res.send/res.render without sanitization (possible XSS)
+                                                                                    
+          111┆ res.send(err.toString());
+                                                
+  [36m[22m[24m  src/router/routes/frontend.js[0m
+   ❯❯❱ semgrep-rules.xss-res-send
+          User input sent to res.send/res.render without sanitization (possible XSS)
+                                                                                    
+           19┆ res.render('user.html',
+           20┆ {message : escapedMessage});
+            ⋮┆----------------------------------------
+           37┆ res.render('user-register.html',
+           38┆ {message : escapedMessage});
+            ⋮┆----------------------------------------
+          155┆ res.render('profile.html',
+          156┆ {beers : beers, user:user[0]});        })
+            ⋮┆----------------------------------------
+          209┆ res.render('beer.html',
+          210┆     {beers : beer,message:love_message, user:user[0]});
+                                             
+  [36m[22m[24m  src/router/routes/order.js[0m
+   ❯❯❱ semgrep-rules.xss-res-send
+          User input sent to res.send/res.render without sanitization (possible XSS)
+                                                                                    
+           45┆ res.send("error")
+            ⋮┆----------------------------------------
+           50┆ res.send(data)
+            ⋮┆----------------------------------------
+           54┆ res.send(buffer)
+                                              
+  [36m[22m[24m  src/router/routes/system.js[0m
+   ❯❯❱ semgrep-rules.xss-res-send
+          User input sent to res.send/res.render without sanitization (possible XSS)
+                                                                                    
+           40┆ res.send(text);
+
