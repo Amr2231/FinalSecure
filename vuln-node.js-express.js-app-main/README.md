@@ -1,3 +1,49 @@
+🔒 Full-Spectrum Web App Hardening
+
+This project demonstrates a complete security hardening workflow on a deliberately vulnerable Node.js + Express application using:
+
+DAST → OWASP ZAP
+
+SAST → Semgrep (built-in + custom rules)
+
+Secure code fixes with before/after validation
+
+📌 Project Overview
+
+We analyzed and hardened a vulnerable Node.js/Express application by:
+
+Discovering vulnerabilities using DAST (OWASP ZAP + manual testing)
+
+Confirming vulnerabilities in source code using SAST (Semgrep)
+
+Writing custom Semgrep rules to detect exploited patterns
+
+Fixing the vulnerabilities securely
+
+Re-testing with ZAP and Semgrep to prove remediation
+
+Results:
+
+✅ 8 vulnerabilities across 4+ OWASP Top 10 categories
+
+✅ 4 critical vulnerabilities fixed
+
+✅ 26.7% reduction in Semgrep findings
+
+✅ 3 custom Semgrep rules implemented
+
+🛠 Requirements
+
+Node.js v18.x
+
+npm
+
+Python 3.8+
+
+Semgrep
+
+OWASP ZAP
+
 🚀 Installation & Running the App
 1️⃣ Clone the Repository
 git clone https://github.com/SirAppSec/vuln-node.js-express.js-app.git
